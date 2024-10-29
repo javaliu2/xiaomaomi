@@ -4,30 +4,29 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>宝宝和哥哥</title>
-    <link rel="stylesheet" href="./styles/style.css">
+    <!--<link href="https://fonts.googleapis.com/css2?family=Poppins:wght@400;600&display=swap" rel="stylesheet">-->
+    <link href="https://fonts.googleapis.com/css2?family=Dancing+Script&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="./styles/style.css"> <!-- 引用外部CSS -->
 </head>
 <body>
-<!-- Profile Pictures and Heart -->
+<!-- Profile Pictures with Names -->
 <div class="profile-pictures">
-<!--     <img src="./images/song.jpg" alt="song's pic">
-    <div class="heart"></div> <!-- Animated Heart -->
-    <img src="./images/rui.jpg" alt="rui's pic"> -->
     <div class="profile">
-            <img src="your_picture.jpg" alt="song's pic">
-            <p class="name">松</p> <!-- 你的名字 -->
-        </div>
-        <div class="heart"></div> <!-- 动态爱心 -->
-        <div class="profile">
-            <img src="./images/rui.jpg" alt="rui's pic">
-            <p class="name">蕊</p> <!-- 她的名字 -->
-        </div>
+        <img src="./images/song.jpg" alt="Your Picture">
+        <p class="name">松</p> <!-- 你的名字 -->
+    </div>
+    <div class="heart"></div> <!-- 动态爱心 -->
+    <div class="profile">
+        <img src="./images/rui.jpg" alt="Partner's Picture">
+        <p class="name">蕊</p> <!-- 她的名字 -->
+    </div>
 </div>
 
 <!-- Dynamic Timer -->
-<div class="timer" id="timer">我们相恋X年X月X日X小时X分钟X秒了</div>
+<div class="timer" id="timer">我们相恋X年X月X日X小时X分钟X秒啦~</div>
 
 <!-- Story Link -->
-<a href="./pages/story.html" class="story-button">进入我们的故事...</a>
+<a href="story.html" class="story-button">进入我们的故事...</a>
 
 <script>
     const startDate = new Date('2024-07-28T15:28:00'); // Modify as needed
@@ -44,7 +43,7 @@
         const seconds = diff.getUTCSeconds();
 
         document.getElementById('timer').textContent =
-            `我们相恋${years}年${months}月${days}日${hours}小时${minutes}分钟${seconds}秒了`;
+            `我们相恋${years}年${months}月${days}日${hours}小时${minutes}分钟${seconds}秒啦~`;
     }
     setInterval(updateTimer, 1000);
 </script>
