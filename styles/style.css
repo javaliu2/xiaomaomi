@@ -7,8 +7,8 @@
 
 body {
     /*font-family: 'Poppins', sans-serif; !* 使用可爱的字体 *!*/
-/*     font-family: 'Dancing Script', cursive; /* 使用手写字体 */ */
-    font-family: 'Poppins', 'Comic Sans MS', cursive, sans-serif;
+    font-family: 'Dancing Script', cursive; /* 使用手写字体 */
+/*     font-family: 'Poppins', 'Comic Sans MS', cursive, sans-serif; */
     display: flex;
     flex-direction: column;
     justify-content: center;
