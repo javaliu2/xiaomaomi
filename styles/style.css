@@ -104,6 +104,10 @@ body {
     background-color: #6d9c9c;
 }
 
+.timer .line-break {
+    display: inline; /* 默认不换行 */
+}
+
 /* 移动端响应式调整 */
 @media (max-width: 768px) {
     .profile-pictures {
@@ -124,9 +128,12 @@ body {
         padding: 10px 20px;
     }
     .name {
-    margin-top: 10px;
-    font-size: 18px;
-    color: #6d9c9c;
-    font-weight: bold;
+        margin-top: 10px;
+        font-size: 18px;
+        color: #6d9c9c;
+        font-weight: bold;
+    }
+    .timer .line-break {
+        display: block; /* 在“日”字处换行 */
     }
 }
