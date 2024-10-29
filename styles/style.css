@@ -116,11 +116,17 @@ body {
     }
 
     .timer {
-        font-size: 18px;
+        font-size: 24px;
     }
 
     .story-button {
         font-size: 16px;
         padding: 10px 20px;
+    }
+    .name {
+    margin-top: 10px;
+    font-size: 18px;
+    color: #6d9c9c;
+    font-weight: bold;
     }
 }
