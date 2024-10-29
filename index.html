@@ -1,10 +1,43 @@
 <!DOCTYPE html>
-<html lang="en">
+<html lang="zh">
 <head>
     <meta charset="UTF-8">
-    <title>Hello Github Pages</title>
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>宝宝和哥哥</title>
+    <link rel="stylesheet" href="./styles/style.css">
 </head>
 <body>
-<h1>Github Pages is cool!</h1>
+<!-- Profile Pictures and Heart -->
+<div class="profile-pictures">
+    <img src="./images/song.jpg" alt="song's pic">
+    <div class="heart"></div> <!-- Animated Heart -->
+    <img src="./images/rui.jpg" alt="rui's pic">
+</div>
+
+<!-- Dynamic Timer -->
+<div class="timer" id="timer">我们相恋X年X月X日X小时X分钟X秒了</div>
+
+<!-- Story Link -->
+<a href="./pages/story.html" class="story-button">进入我们的故事...</a>
+
+<script>
+    const startDate = new Date('2024-07-28T15:28:00'); // Modify as needed
+
+    function updateTimer() {
+        const now = new Date();
+        const diff = new Date(now - startDate);
+
+        const years = diff.getUTCFullYear() - 1970;
+        const months = diff.getUTCMonth();
+        const days = diff.getUTCDate() - 1;
+        const hours = diff.getUTCHours();
+        const minutes = diff.getUTCMinutes();
+        const seconds = diff.getUTCSeconds();
+
+        document.getElementById('timer').textContent =
+            `我们相恋${years}年${months}月${days}日${hours}小时${minutes}分钟${seconds}秒了`;
+    }
+    setInterval(updateTimer, 1000);
+</script>
 </body>
 </html>
