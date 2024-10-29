@@ -104,3 +104,24 @@ body {
 .story-button:hover {
     background-color: #6d9c9c;
 }
+
+/* 移动端响应式调整 */
+@media (max-width: 768px) {
+    .profile-pictures {
+        flex-direction: column;
+    }
+
+    .profile-pictures img {
+        width: 100px;
+        height: 100px;
+    }
+
+    .timer {
+        font-size: 18px;
+    }
+
+    .story-button {
+        font-size: 16px;
+        padding: 10px 20px;
+    }
+}
