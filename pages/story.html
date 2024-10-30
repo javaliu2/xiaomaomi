@@ -4,9 +4,57 @@
     <meta charset="UTF-8">
     <title>Our Story</title>
     <link href="https://fonts.googleapis.com/css2?family=Dancing+Script&display=swap" rel="stylesheet">
-    <link rel="stylesheet" href="./styles/style.css">
+    <link rel="stylesheet" href="../styles/style.css">
 </head>
 <body>
-<h1>to be continuing...</h1>
+    <!-- 轮播图组件 -->
+    <div class="carousel-container">
+        <button id="carousel-prev" class="carousel-btn">⬅</button>
+        <img id="carousel-image" src="../images/fig1.jpg" alt="Carousel Image">
+        <button id="carousel-next" class="carousel-btn">➡</button>
+    </div>
+
+    <!-- 音频播放器和侧边栏容器 -->
+    <div class="audio-sidebar-container">
+        <!-- 音频播放器组件 -->
+        <div class="audio-player">
+            <!-- 歌曲信息 -->
+            <div class="song-info">
+                <img id="song-image" src="../images/rui.jpg" alt="Song Cover">
+                <p id="song-description">这是一首好听的歌</p>
+            </div>
+
+            <!-- 控制区域 -->
+            <audio id="audio" src="../audio/gouzhiqishi.m4a"></audio>
+
+            <div class="control-section">
+                <button id="prev">⏮</button>
+                <button id="play-pause">▶</button>
+                <button id="next">⏭</button>
+                <button id="menu">☰</button>
+            </div>
+
+            <!-- 进度条 -->
+            <div class="progress-bar">
+                <span id="current-time">00:00</span>
+                <input type="range" id="progress" value="0" max="100">
+                <span id="total-time">03:03</span>
+            </div>
+        </div>
+
+        <!-- 侧边栏组件 -->
+        <div id="sidebar" class="sidebar">
+            <span id="only_you">listen my heart</span>
+            <ul id="playlist">
+                <li data-src="../audio/gouzhiqishi.m4a" data-image="../images/fig_gou.jpg" data-description="勾指起誓-洛天依">勾指起誓-洛天依</li>
+                <li data-src="../audio/xihuanni.mp3" data-image="../images/fig_xi.png" data-description="喜欢你-Beyond">喜欢你-Beyond</li>
+                <li data-src="../audio/zhendeaini.mp3" data-image="../images/fig_zhen.jpg" data-description="真的爱你-Beyond">真的爱你-Beyond</li>
+                <li data-src="../audio/guiqulaixi.m4a" data-image="../images/fig_gui.png" data-description="归去来兮-花粥">归去来兮-花粥</li>
+                <li data-src="../audio/shanzhashuzhilian.m4a" data-image="../images/fig_shan.jpg" data-description="山楂树之恋-程佳佳">山楂树之恋-程佳佳</li>
+            </ul>
+        </div>
+    </div>
+
+<script src="../scripts/story.js"></script>
 </body>
 </html>
