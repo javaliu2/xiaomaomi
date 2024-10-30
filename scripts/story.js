@@ -19,8 +19,6 @@ const carouselImages = ['../images/fig1.jpg', '../images/fig2.jpg', '../images/f
 let currentCarouselIndex = 0;
 let carouselTimeout;
 const carouselImage = document.getElementById('carousel-image');
-const carouselPrev = document.getElementById('carousel-prev');
-const carouselNext = document.getElementById('carousel-next');
 
 // 歌曲列表
 const playlist = [
@@ -44,7 +42,7 @@ function loadSong(index) {
         item.classList.toggle('active', i === index);  // 加黑当前歌曲
     });
     playPauseButton.textContent = '⏸';
-    audio.play();
+    document.getElementById('audio').play();
 }
 
 audio.addEventListener('ended', () => {
@@ -129,22 +127,6 @@ function showNextCarouselImage() {
     currentCarouselIndex = (currentCarouselIndex + 1) % carouselImages.length;
     carouselImage.src = carouselImages[currentCarouselIndex];
 }
-
-function showPrevCarouselImage() {
-    currentCarouselIndex = (currentCarouselIndex - 1 + carouselImages.length) % carouselImages.length;
-    carouselImage.src = carouselImages[currentCarouselIndex];
-}
-
-carouselNext.addEventListener('click', () => {
-    clearTimeout(carouselTimeout);
-    showNextCarouselImage();
-    startCarousel();
-});
-carouselPrev.addEventListener('click', () => {
-    clearTimeout(carouselTimeout);
-    showPrevCarouselImage();
-    startCarousel();
-});
 
 function startCarousel() {
     carouselTimeout = setTimeout(() => {
