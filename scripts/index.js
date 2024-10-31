@@ -20,9 +20,9 @@ function updateTimer() {
     let timerText;
 
     if (isMobileDevice()) {
-        timerText = `我们相恋${years}年${months}月${days}日<br>${hours}小时${minutes}分钟${seconds}秒啦~`;
+        timerText = `我们相恋${years}年${months}个月${days}天<br>${hours}小时${minutes}分钟${seconds}秒啦~`;
     } else {
-        timerText = `我们相恋${years}年${months}月${days}日${hours}小时${minutes}分钟${seconds}秒啦~`;
+        timerText = `我们相恋${years}年${months}个月${days}天${hours}小时${minutes}分钟${seconds}秒啦~`;
     }
 
     document.getElementById('timer').innerHTML = timerText;
