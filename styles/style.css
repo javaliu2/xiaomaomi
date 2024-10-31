@@ -14,6 +14,9 @@ body {
     height: 100vh;
     background: linear-gradient(135deg, #fbc2eb 0%, #a6c1ee 100%);
     color: #333;
+    margin: 0;
+    padding: 0;
+    font-size: 1.25em; /* 从基准大小增加 */
 }
 
 .profile-pictures {
@@ -307,4 +310,126 @@ body {
     font-weight: bold; /* 可选，调整字体粗细 */
     text-align: center; /* 可选，使文本居中 */
     line-height: 1.5; /* 设置行高，使文字更具层次感 */
+}
+
+/* 页面跳转 */
+#bouncing-ball {
+    position: fixed;
+    width: 50px;
+    height: 50px;
+    background-color: #ff69b4;
+    color: white;
+    border-radius: 50%;
+    text-align: center;
+    line-height: 50px;
+    font-size: 16px;
+    cursor: pointer;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
+    transition: transform 0.2s ease-in-out;
+    z-index: 9999;
+}
+
+/*对话窗口*/
+.chat-container {
+    width: 100%;
+    max-width: 600px;
+    margin: auto;
+    background-color: white;
+    border-radius: 10px;
+    box-shadow: 0 2px 10px rgba(0, 0, 0, 0.1);
+    display: flex;
+    flex-direction: column;
+    height: 90vh;
+}
+.header {
+    padding: 10px;
+    display: flex;
+    align-items: center;
+    border-bottom: 1px solid #e0e0e0;
+}
+.header img {
+    border-radius: 50%;
+    width: 30px;
+    height: 30px;
+}
+.header .nickname {
+    flex-grow: 1;
+    text-align: center; /* 居中对齐 */
+    font-size: 20px;
+}
+.conversation {
+    flex-grow: 1;
+    padding: 10px;
+    overflow-y: auto;
+    background-color: #ff6b6b;
+    position: relative; /* 允许绝对定位选项 */
+}
+.message {
+    margin: 5px 0;
+    display: flex;
+    align-items: center;
+}
+.message img {
+    border-radius: 10%;
+    width: 45px;
+    height: 45px;
+    margin-right: 10px;
+}
+.sent {
+    justify-content: flex-end;
+}
+.received {
+    justify-content: flex-start;
+}
+.sent .message-box {
+    background-color: #ffcccb; /* 粉红色 */
+    border-radius: 15px;
+    padding: 10px;
+    max-width: 70%;
+    word-wrap: break-word;
+}
+.received .message-box {
+    background-color: #ffcccb; /* 灰色 */
+    border-radius: 15px;
+    padding: 10px;
+    max-width: 70%;
+    word-wrap: break-word;
+}
+.input-area {
+    padding: 10px;
+    display: flex;
+    align-items: center;
+    border-top: 1px solid #e0e0e0;
+}
+.input-area input {
+    flex-grow: 1;
+    padding: 10px;
+    border: 1px solid #e0e0e0;
+    border-radius: 20px;
+    margin-right: 10px;
+}
+.icon {
+    width: 30px;
+    height: 30px;
+    margin-right: 10px;
+}
+.options {
+    position: absolute; /* 绝对定位 */
+    bottom: 30px; /* 距离底部的距离，可以根据需要调整 */
+    left: 50%; /* 使其在父容器内水平居中 */
+    transform: translateX(-50%); /* 通过平移使其真正居中 */
+    display: flex;
+    gap: 10px;
+    flex-wrap: wrap; /* 允许换行 */
+}
+.option {
+    padding: 8px 15px;
+    background-color: #ff00d0;
+    color: white;
+    border-radius: 15px; /* 较大的弧度 */
+    cursor: pointer;
+    transition: background-color 0.3s; /* 添加过渡效果 */
+}
+.option:hover {
+    background-color: #b30089; /* 悬停时的颜色变化 */
 }
